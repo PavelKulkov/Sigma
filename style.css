@@ -154,23 +154,87 @@ a{
     margin-left: 240px;
     position: relative;
 }
+h1{
+    position: absolute;
+    margin: 23px 0 0 22px;
+    font-size: 22px;
+    font-family: "Arial";
+    color: rgb(0, 46, 121);
+    font-weight: bold;
+    line-height: 1.091;
+}
 .listOfProducts{
     position: absolute;
-    margin: 80px 27px 0 4px;
-    list-style: none;
+    margin: 80px 0 0 45px;
+}
+.infoProduct a{
     font-size: 12px;
     font-family: "Arial";
     color: #003280;
     text-decoration: underline;
     line-height: 1.5;
 }
-.listOfProducts li{
-    float: left;
-    margin-left: 23px;
-}
-.listOfProducts li a{
+.infoProduct span{
     display: block;
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: "Arial";
+    color: rgb(251, 159, 24);
+    font-weight: bold;
+    line-height: 1;
+}
+.item-1{
+    display: inline-block;
     width:200px;
     height: 266px;
-    bac
 }
+.item-2, .item-3{
+    display: inline-block;
+    width:200px;
+    height: 266px;
+    margin-left: 10px;
+}
+
+.item-1 img, .item-2 img, .item-3 img{
+    margin-left: 36px;
+}
+.pagination{
+    position: absolute;
+    margin: 1270px 0 0 235px;
+}
+/*footer*/
+.footer{
+    height: 112px;
+    margin-top: 228px;
+    background-color: rgb(205, 205, 205);
+}
+.navigationBot {
+    position: absolute;
+    list-style: none;
+    margin-top: 12px;
+    font-size: 18px;
+    font-family: "Arial";
+}
+.navigationBot li{
+    display: inline;
+    margin-left: 11px;
+}
+.navigationBot li a {
+    color: rgb(88, 76, 61);
+}
+.span1footer{
+    position: absolute;
+    margin: 71px 0 0 11px;
+    font-size: 18px;
+    font-family: "Arial";
+    color: rgb(88, 75, 61);
+}
+.span2footer {
+    position: absolute;
+    margin: 71px 0 0 635px;
+    font-size: 14px;
+    font-family: "Arial";
+    color: rgb(88, 75, 61);
+    text-align: right;
+}
+
