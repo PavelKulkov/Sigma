@@ -3,23 +3,41 @@
     padding: 0;
     border:0 none;
 }
-body{
-    background: white;
+html{
+    position: relative;
     min-height: 100%;
-    padding-top: 25px;
+}
+body{
+    background: #a1c6ea;
+    background: linear-gradient(to bottom,#FEFEFE,#a1c6ea) no-repeat;
+    height: 100%;
 }
 a{
     text-decoration: none;
     color:black;
 }
+h1{
+    position: absolute;
+    margin: 23px 0 0 22px;
+    font-size: 22px;
+    font-family: "Arial";
+    color: rgb(0, 46, 121);
+    font-weight: bold;
+    line-height: 1.091;
+}
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+    }
 .wrap{
     width: 960px;
-    background: #a1c6ea;
-    background: linear-gradient(to bottom,#FEFEFE,#a1c6ea);
     margin: 0 auto;
     position: relative;
 }
-
+.top-menu-wrap{
+    background: #ededed;
+}
 /*Меню и поиск*/
 .menuAndSearch{
     width: 100%;
@@ -38,83 +56,112 @@ a{
     margin-left: 11px;
 }
 .search{
-    position: absolute;
-    right: 0;
-    top:0;
-    margin: 12px 12px;
+    float: right;
+    margin: 10px 0 0 0;
 }
-
+.strSearch{
+    width: 250px;
+    max-height: 18px;
+    background: #d2d2d2;
+    padding: 2px 5px 0 5px;
+    float: left;
+}
+.strSub{
+    background: linear-gradient(to bottom,#ffc600,#ff9600);
+}
 
 /*Header*/
 .header{
-    height: 227px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
 }
 .logo{
-    display:inline;
     margin-left: 11px;
 }
 .contacts{
-    display: inline;
     margin-left: 120px;
 }
+.basketWrap{
+    height: 70px;
+    width: 220px;
+    background: linear-gradient(to bottom,#ffc600,#ff9600);
+
+}
+.basketWrap:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left:110px solid transparent;
+    border-right: 110px solid transparent;
+    border-top:30px solid #ff9600;
+    position: absolute;
+    top:70px;
+}
+.basket{
+    margin: 10px 0 0 0;
+    font-size: 29px;
+    font-weight: 100;
+    color: #353743;
+    text-align: center;
+}
 .auth{
-    display:inline;
-    margin-left: 65px;
+    margin: 5px 0 0 0;
+    text-align: center;
 }
 /*Меню услуг*/
 .serviceMenu{
-    height: 86px;
     margin: 34px 10px 23px 10px;
     background: linear-gradient(to top,#ff9600,#ffc600);
     border-radius: 30px;
-    position: relative;
 }
 .navigationServiceMenu{
-    position: absolute;
     list-style: none;
-    margin: 0px 0 0 62px;
-    font-size: 14px;
+    display:flex;
+    justify-content: space-between;
+    font-size: 15px;
     font-family: "Arial";
     font-weight: bold;
+    padding: 10px 40px 10px 40px;
 }
 .navigationServiceMenu li{
-    float: left;
-
+    margin: 10px 0 0 10px;
+    padding: 0px 0 10px 11px;
 }
-.navigationServiceMenu li a{
-    display:block;
-    padding-top: 35px;
-    text-align: center;
-    width: 129px;
+.borderMenu{
+    border-left: 1px solid #ffe17d;
+    box-shadow: inset 1px 0px 0px 0px rgba(0, 0, 0, 0.3);
 }
-.navigationServiceMenu .predpr1C a{
-    background: url("img/logo1c.gif") center top no-repeat;
-    margin: 14px 20px 0 0;
-    border-right: 2px;
-    border-image: url("img/borderBg.gif")2;
+._1C{
+    background: url("img/1C.png") center no-repeat;
+    border-image: url("img/borderBg.gif") 2;
+    width: 80px;
+    height:50px;
+    margin: 0 auto;
 }
-.navigationServiceMenu .service a{
-    background: url("img/logoService.gif")center top no-repeat;
-    margin: 14px 20px 0 20px;
-    border-right: 2px;
-    border-image: url("img/borderBg.gif")2;
+.ser_2{
+    background: url("img/ser_2.png") center no-repeat;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
 }
-.navigationServiceMenu .buyDevices a{
-    background: url("img/logoBuyDevices.gif")center top no-repeat;
-    margin: 14px 20px 0 20px;
-    border-right: 2px;
-    border-image: url("img/borderBg.gif")2;
+.ser_3{
+    background: url("img/ser_3.png") center no-repeat;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
 }
-.navigationServiceMenu .software a{
-    background: url("img/logoSoftware.gif")center top no-repeat;
-    margin: 14px 20px 0 20px;
-    border-right: 2px;
-    border-image: url("img/borderBg.gif")2;
-
+.ser_4{
+    background: url("img/ser_4.png") center no-repeat;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
 }
-.navigationServiceMenu .itService a{
-    background: url("img/logoItService.gif")center top no-repeat;
-    margin: 14px 20px 0 20px;
+.ser_5{
+    background: url("img/ser_5.png") center no-repeat;
+    width: 80px;
+    height: 50px;
+    margin: 0 auto;
 }
 /*Левое меню*/
 .leftMenu{
@@ -125,7 +172,7 @@ a{
     background-image: -moz-linear-gradient( 90deg, rgb(255,150,0) 0%, rgb(255,198,0) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(255,150,0) 0%, rgb(255,198,0) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(255,150,0) 0%, rgb(255,198,0) 100%);
-    margin: 22px 0 0 10px;
+    margin: 0 0 0 10px;
     position: relative;
     float: left;
 }
@@ -154,15 +201,7 @@ a{
     margin-left: 240px;
     position: relative;
 }
-h1{
-    position: absolute;
-    margin: 23px 0 0 22px;
-    font-size: 22px;
-    font-family: "Arial";
-    color: rgb(0, 46, 121);
-    font-weight: bold;
-    line-height: 1.091;
-}
+
 .listOfProducts{
     position: absolute;
     margin: 80px 0 0 45px;
@@ -175,18 +214,16 @@ h1{
     line-height: 1.5;
 }
 .infoProduct span{
-    display: block;
-    margin-top: 30px;
     font-size: 18px;
     font-family: "Arial";
     color: rgb(251, 159, 24);
     font-weight: bold;
-    line-height: 1;
 }
 .item-1{
     display: inline-block;
     width:200px;
     height: 266px;
+    position: relative;
 }
 .item-2, .item-3{
     display: inline-block;
@@ -198,9 +235,45 @@ h1{
 .item-1 img, .item-2 img, .item-3 img{
     margin-left: 36px;
 }
+.icon{
+    position: relative;
+}
+.icon::before{
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    bottom: 0px;
+    right: 0px;
+    background: url("img/action.png");
+}
+.icon2{
+    position: relative;
+}
+.icon2::before{
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    bottom: 0px;
+    right: 0px;
+    background: url("img/lid.png");
+}
+.addInBasket{
+    width: 33px;
+    height: 26px;
+    float: right;
+    display: inline-block;
+    background: url("img/basket_for.png");
+}
+.price{
+    margin-top:15px;
+}
 .pagination{
     position: absolute;
-    margin: 1270px 0 0 235px;
+    bottom: 25px;
+    left:50%;
+    transform: translate(-50%,0);
 }
 /*footer*/
 .footer{
